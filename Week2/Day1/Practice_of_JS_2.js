@@ -7,7 +7,7 @@
 5. Event loops, Callback Queues, JS
 */
 
-// Synchronous Tasks:-
+Synchronous Tasks:-
 // Synchronous Code:- Synchronous code is executed line by line, in order it's written. Each operation waits for the previous one to complete before moving on to the next one.
 /*
 Eg:- function sum(n){
@@ -25,7 +25,7 @@ const ans3 = sum(10000);
 console.log(ans3);
 */
 
-// I/O bound tasks vs CPU bound tasks:-
+I/O bound tasks vs CPU bound tasks:-
 /* 
 CPU bound tasks:- CPU-bound tasks are operations that are limited by the speed and power of the CPU. These tasks require significant computation and processing power, meaning that the performance bottleneck is the CPU itself.
 Eg:-
@@ -42,7 +42,7 @@ Eg:-
     console.log(contents);
 */
 
-// I/O heavy operations:-
+I/O heavy operations:-
 /*
 I/O Heavy operation refer to tasks in a computer program that involve a lot of data transfer between the program and external systems or devices. These operations usually require waiting for data to be read from or written to sources like disks, networks, databases, or other external devices, which can be time consuming compared to in-memory computation.
 Eg:-
@@ -61,7 +61,7 @@ const contents2 = fs.readFileSync("b.txt", "utf-8");
 console.log(contents2);
 */
 
-// Sync code and Async code:-
+Sync code and Async code:-
 // const fs = require("fs");
 // const contents1 = fs.readFileSync("a.txt", "utf-8");
 // console.log(contents1);
@@ -69,7 +69,7 @@ console.log(contents2);
 // const contents2 = fs.readFileSync("b.txt", "utf-8");
 // console.log(contents2);
 
-// Functional Arguments:-
+Functional Arguments:-
 // Functional Arguments:- Passing a function to another function as an argument. 
 // Write a calculator program that adds, subtracts, multiplies, divides two arguments.
 // Without calling each and every function we can pass in what needs to be done as an argument
@@ -103,7 +103,7 @@ function doOperation(a,b,op){
 */
 // console.log(sum(1,2, sum));
 
-// Asynchronous Function:-
+Asynchronous Function:-
 // Asynchronous Function:- let's look at the code to read from a file asynchronously. Here we pass in a function as an argument. This function is called a callback since the function gets called back when the file is read.
 const fs = require("fs"); 
 function print(err, data){
@@ -113,7 +113,7 @@ fs.readFile("b.txt", "utf-8", print); // String,String,Function.
 fs.readFile("a.txt", "utf-8", print); // here we are not synchronously waiting for the I/O to happen. Whenever the I/O succeeds it will callback the third argument/it will the call the function that you have registered with it.
 // console.log("Done!");
 
-// setTimeout:-
+setTimeout:-
 //setTimeout:- It is a asynchronous function that present in globally. setTimeout is another asynchronous function that executes a certain code after some time.
 function timeout(){
     console.log("Click the button");
@@ -140,7 +140,7 @@ Click the button -> It happen becoz the thread wasn't free and that's why JavaSc
 JS doesn't provide setTimeout the web browser provide setTimeout function on the top.
 */
 
-// JS Architecture for Async Code:-
+JS Architecture for Async Code:-
 /*
 1. Call Stack:-
     i. The call stack is a data structure that keeps track of the function calls in your program. It operates in a "Last In, First Out" (LIFO) manner, meaning the last function that was called is the first one to be executed and removed from the stack.
