@@ -16,7 +16,7 @@ Bash and Terminal Basics:-
     f. :q! -> quit vi and do not save changes
     g. yy -> (Yank)copy a line of text
     h. p -> paste a line of yanked text below the current line
-10. rm -> is used to remove files and directories
+10. rm -> is used to remove files 
 11. cp [file1.txt] [file2.txt] -> is used to copy files and directories
 12. mv [file1.txt] [/path/to/new/location] -> is used to move files or directories
 13. clear -> is used to clear the terminal screen

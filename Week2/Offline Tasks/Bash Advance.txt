@@ -18,3 +18,22 @@ Advance Bash:-
 17. mkdir -p folderName/Name of the folder you want to make -> to make a folder which contains lot of folders like Website folder
 18. mv filename.html filename.css -> to rename a file
 19. cp -r [filename1] [filename2] -> to move one directory to another directory
+20. rm -r filename -> to remove folder
+21. chmod ugoa+-=rwx [filename] -> helps in  setting new permissions that have to be applied to files or directories
+    syntax -> chmod [options] [mode] [filename]
+    u-owner, g-group, o-others, a-all
+    +-add permissions, --remove permissions, =-set permissions to the specified values
+    r-read persmission, w-write permission, x-execute permission
+22. echo 'Message to print' -> allows users to display lines of text thata are passed as arguments
+23. echo $PATH -> to show display the path
+24. head filename -> to display first 10 rows of that particular file
+25. tail filename -> to display the last 10 rows of that particular file
+26. head -20 filename -> to display the first 20 rows of that particular file
+27. wc filename -> to display the count of lines, words
+28. grep "wordTOFind" filename | wc -> used to find occurence of the word in the file
+29. grep -c "wordToFind" filename -> to print the count of lines in the file
+30. grep -h "wordToFind" filename -> to the number of lines where the word is present in the file
+31. grep -hir "wordToFind" filename -> to find the occurence of word that are present in the directory
+32. grep -hin "wordToFind" filename -> to display the number of words and lines number of the given word
+33. grep -o "one" filename -> display the given word that are matched 
+34. 
