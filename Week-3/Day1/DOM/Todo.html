@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <input type="text"></input>
+        <button onclick="addTodo()">Add todo!</button>
+    </body>
+    <script>
+        let ctr = 1;
+
+        function deleteTodo(index){
+            const element = document.getElementById(index);
+            element.parentNode.removeChild(element);
+        }
+
+        function addTodo(){
+            // This is how we extract inner value inside an input element.
+            const inputElement = document.querySelector("input");
+            const value = inputElement.value;
+
+            // new div for todo
+            const newDivElement = document.createElement("div");
+            newDivElement.innerHTML = "<div>" + value + '</div><button onclick="deleteTodo(' + ctr + ')">delete</button>';
+            newDivElement.setAttribute("id", ctr);
+            ctr = ctr + 1;
+            // to add new div in body 
+            document.querySelector("body").appendChild(newDivElement);
+        }
+    </script>
+</html>
