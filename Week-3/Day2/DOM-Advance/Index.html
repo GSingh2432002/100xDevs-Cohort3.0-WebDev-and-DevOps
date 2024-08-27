@@ -1,0 +1,23 @@
+<!-- It is a state less code we have written. After this we will learn about state and components. -->
+<html>
+    <body>
+        <input type="text"></input>
+        <button onclick="addTodo()">Add Todo!</button>
+        <script>
+            function addTodo(){
+                // Fetching the values of button and innerHTML
+                const valueOfElement = document.querySelector("input").value;
+                const spanElement = document.createElement("span");
+                const buttonElement = document.createElement("button");
+                spanElement.innerHTML = valueOfElement;
+                buttonElement.innerHTML = "Delete";
+                const divElement = document.createElement("div");
+
+                divElement.appendChild(spanElement);
+                divElement.appendChild(buttonElement);
+
+                document.querySelector("body").appendChild(divElement);
+            }
+        </script>
+    </body>
+</html>
