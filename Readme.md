@@ -14,4 +14,4 @@ Ready to dive in? Here’s how to get started:
 Run the following command in your terminal to clone the repository and start building locally:
 
 ```bash
-git clone https://github.com/irohandev/WebDev-DevOps-Cohort-3.0.git
+git clone [https://github.com/GSingh2432002/100xDevs-Cohort3.0-WebDev-and-DevOps]
