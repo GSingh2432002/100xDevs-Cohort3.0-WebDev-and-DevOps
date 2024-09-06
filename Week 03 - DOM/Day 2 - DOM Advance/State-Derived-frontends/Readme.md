@@ -1,5 +1,4 @@
 # State Derived Frontends
-
 To make frontends easier to code, the concept of state came into the picture. You will see this more when we reach React.
 
 ## There are three jargon we need to understand
