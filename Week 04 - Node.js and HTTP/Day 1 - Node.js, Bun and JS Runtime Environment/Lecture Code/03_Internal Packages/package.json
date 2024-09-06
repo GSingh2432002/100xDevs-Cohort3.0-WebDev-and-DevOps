@@ -1,0 +1,12 @@
+{
+  "name": "03_internal-packages",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "Index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
