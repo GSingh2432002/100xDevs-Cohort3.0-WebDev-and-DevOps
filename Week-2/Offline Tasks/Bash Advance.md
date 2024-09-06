@@ -35,5 +35,4 @@ Advance Bash:-
 30. grep -h "wordToFind" filename -> to the number of lines where the word is present in the file
 31. grep -hir "wordToFind" filename -> to find the occurence of word that are present in the directory
 32. grep -hin "wordToFind" filename -> to display the number of words and lines number of the given word
-33. grep -o "one" filename -> display the given word that are matched 
-34. 
+33. grep -o "one" filename -> display the given word that are matched
