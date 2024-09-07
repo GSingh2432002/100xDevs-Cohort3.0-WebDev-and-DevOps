@@ -1,5 +1,5 @@
 {
-  "name": "04_external-packages",
+  "name": "assignment---02-create-a-todo-using-cli",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "chalk": "^5.3.0",
-    "express": "^4.19.2"
+    "commander": "^12.1.0"
   }
 }
