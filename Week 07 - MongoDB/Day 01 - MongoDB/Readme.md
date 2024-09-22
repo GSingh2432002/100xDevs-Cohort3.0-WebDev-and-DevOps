@@ -84,6 +84,7 @@ doc.age; // 59
 await doc.save();
 // Mongoose will convert '60' from a string to a number, even in an update
 await UserModel.updateOne({}, { $set: { age: '60' } });
+```
 
 ## What are "_id" and "__v" Fields in MongoDB?
 Both fields are automatically created by MongoDB.
