@@ -16,23 +16,24 @@ app.use("/api/v1/course", courseRouter);
 app.use("/api/v1/admin", adminRouter);
 
 // Create a main function to connect to the database and start the server
-function main(){
-    // Use the connect method to connect to the database and log a success message if the connection is successful
-    const connection = mongoose.connect("mongodb+srv://gsingh332211:WdlJp5rC1UbwXWFr@cluster1.6ymvq.mongodb.net/course-selling-app")
+// MongoDB connection string (replace with your actual URI)
+async function main() {
+  try {
+      // Wait for the connection to the database to complete
+      await mongoose.connect("mongodb+srv://gsingh332211:WdlJp5rC1UbwXWFr@newcluster1.6ymvq.mongodb.net/New-Course-Selling-App", {
+          useNewUrlParser: true,
+          useUnifiedTopology: true
+      });
+      console.log("Connected to the database");
 
-    // Check if the connection is successful or not
-    if(connection){
-        // If the connection is successful
-        console.log("Connected to the database");        
-    }else{
-        // If not successful
-        console.log("Failed to connect to the database");        
-    }
-
-    // Start the server on port 3000
-    app.listen(3000, () => {
-        console.log("Server is listening on port 3000");        
-    })
+      // Start the server on port 3000
+      app.listen(3000, () => {
+          console.log("Server is listening on port 3000");
+      });
+  } catch (error) {
+      // If there is an error connecting to the database
+      console.error("Failed to connect to the database", error);
+  }
 }
 
 // Call the main function
