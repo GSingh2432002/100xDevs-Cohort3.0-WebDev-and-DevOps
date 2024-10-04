@@ -16,19 +16,19 @@ adminRouter.post("/signin", function(req,res) {
     })
 })
 
-adminRouter.post("/", function(req,res) {
+adminRouter.post("/course", function(req,res) {
     res.json({
         message: "Admin courses Endpoint"
     })
 })
 
-adminRouter.put("/", function(req,res) {
+adminRouter.put("/course", function(req,res) {
     res.json({
         message: "Admin putting courses Endpoint"
     })
 })
 
-adminRouter.get("/bulk", function(req,res) {
+adminRouter.get("/course/bulk", function(req,res) {
     res.json({
         message: "Admin getting bulk courses Endpoint"
     })
