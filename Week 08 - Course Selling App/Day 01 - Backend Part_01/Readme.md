@@ -15,7 +15,7 @@ The line `const { Router } = require("express");` is a form of destructuring ass
 
 1. `require("express")` imports the Express library, which is a Node.js web application framework. This `require` function loads the Express module so that you can use its features in your application.
 
-2. `{ Router }` is destructuring the object returned by `require("express")`. Express exports several things, one of which is `Router`. This syntax allows you to directly extract the `Router` function from the `express` module without importing the entire `express` object.
+2. `{ Router }` is destructuring the object returned by `require("express")`. Express exports several things, one of which is `Router`.This syntax allows you to directly extract the `Router` function from the `express` module without importing the entire `express` object.
 
 3. `Router` is a feature of Express that allows you to create modular, mountable route handlers. It's useful when you want to break up your routes into separate modules for better organization and modularity.
 
