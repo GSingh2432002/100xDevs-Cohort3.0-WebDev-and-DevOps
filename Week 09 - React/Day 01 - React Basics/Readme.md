@@ -179,6 +179,7 @@ React is an open-source JavaScript library used for building user interfaces, pa
 function Greeting() {
   return <h1>Hello, world!</h1>;
 }
+```
 
 # 2. Components
 
@@ -243,7 +244,8 @@ function UserGreeting(props) {
 
 function App() {
   return <UserGreeting username="Alice" />;
-}```
+}
+```
 
 ## How They Work Together
 
