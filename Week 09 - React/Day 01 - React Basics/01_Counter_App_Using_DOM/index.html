@@ -1,0 +1,88 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Application</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+            font-family: 'Arial', sans-serif;
+        }
+
+        button {
+            position: relative;
+            background-color: #4CAF50;
+            color: #444444;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            outline: none;
+            z-index: 1;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 20px;
+            background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77);
+            z-index: -1;
+            transition: opacity 0.3s;
+        }
+
+        button:hover::before {
+            opacity: 0.8;
+        }
+
+        button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+            background-color: #45a049;
+        }
+
+        button:active {
+            transform: translateY(2px);
+            background-color: #3e8e41;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        button::after {
+            content: 'Click me!';
+            display: block;
+            font-size: 0.8rem;
+            margin-top: 5px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        button:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="onButtonPress()" id="btn">Counter 0</button>
+
+    <script>
+        function onButtonPress() {
+            const currentValue = document.getElementById("btn").innerHTML;
+            const currentCounter = currentValue.split(" ")[1];
+            const newCounter = parseInt(currentCounter) + 1;
+            document.getElementById("btn").innerHTML = "Counter " + newCounter;
+        }
+    </script>
+</body>
+</html>

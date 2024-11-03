@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.center_button{
+    background-color: aliceblue;
+    color: black;
+    padding: 10px 20px;
+    font-size: medium;
+}
