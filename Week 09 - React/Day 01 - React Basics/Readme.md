@@ -153,6 +153,7 @@ export default function square(a) {
 import square, { divide } from './complexMath.js';
 console.log(square(5));
 console.log(divide(10, 2));
+```
 
 # What is React?
 
@@ -242,10 +243,9 @@ function UserGreeting(props) {
 
 function App() {
   return <UserGreeting username="Alice" />;
-}
+}```
 
-```
-# How They Work Together
+## How They Work Together
 
 - **JSX** is used to build the structure and layout of components.
 - **Components** can be composed to create complex UIs.
