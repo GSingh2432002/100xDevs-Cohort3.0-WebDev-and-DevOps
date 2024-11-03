@@ -304,8 +304,11 @@ React re-renders components for several reasons:
   **Code Example**:
   ```javascript
   const element = document.createElement("div");
-  element.innerText = "Hello, world!";```
+  element.innerText = "Hello, world!";
+  ```
 
 - **JSX**: Combines JavaScript with an XML-like syntax, allowing you to write code that looks like HTML within JavaScript. JSX is then compiled to pure JavaScript by tools like Babel.
+
   **Code Example**:
-  ```const element = <div>Hello, world!</div>;```
+  ```const element = <div>Hello, world!</div>;
+  ```
