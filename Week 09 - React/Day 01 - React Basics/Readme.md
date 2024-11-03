@@ -6,7 +6,6 @@ To create a module, write a JavaScript file with the functions, variables, or cl
 
 **Example: `mathUtils.js`**
 ```javascript
-// Define functions to be exported
 export function add(a, b) {
   return a + b;
 }
@@ -14,8 +13,6 @@ export function add(a, b) {
 export function subtract(a, b) {
   return a - b;
 }
-
-// Exporting a variable
 export const PI = 3.14159;
 ```
 
@@ -24,21 +21,17 @@ Use the `import` keyword to bring the exported elements into another file. You c
 
 **Example: Importing specific exports**
 ```javascript
-// main.js
 import { add, subtract, PI } from './mathUtils.js';
-
-console.log(add(2, 3)); // Output: 5
-console.log(subtract(5, 3)); // Output: 2
-console.log(PI); // Output: 3.14159
+console.log(add(2, 3));
+console.log(subtract(5, 3));
+console.log(PI);
 ```
 
 **Example: Importing all exports as an object**
 ```javascript
-// main.js
 import * as mathUtils from './mathUtils.js';
-
-console.log(mathUtils.add(2, 3)); // Output: 5
-console.log(mathUtils.PI); // Output: 3.14159
+console.log(mathUtils.add(2, 3)); 
+console.log(mathUtils.PI); 
 ```
 
 ## 3. Exporting Modules
@@ -48,48 +41,27 @@ console.log(mathUtils.PI); // Output: 3.14159
 
 **Example: Default Export**
 ```javascript
-// calculator.js
 export default function multiply(a, b) {
   return a * b;
 }
-
-// main.js
 import multiply from './calculator.js';
 
-console.log(multiply(4, 5)); // Output: 20
+console.log(multiply(4, 5)); 
 ```
 
 **Example: Named and Default Combined**
 ```javascript
-// complexMath.js
 export function divide(a, b) {
   return a / b;
 }
-
 export default function square(a) {
   return a * a;
 }
-
-// main.js
 import square, { divide } from './complexMath.js';
-
-console.log(square(5)); // Output: 25
-console.log(divide(10, 2)); // Output: 5
+console.log(square(5));
+console.log(divide(10, 2));
 ```
-
-## Summary
-- **Named Export**: `export { item1, item2 }` or `export function funcName() {...}`
-- **Default Export**: `export default item`
-- **Import**: `import { item } from './module'` or `import item from './module'`
-
-Modules help in modularizing code and making your JavaScript projects scalable and maintainable.
-
-# Let's write the provided content to a Markdown (.md) file
-
-content = """
 # Difference Between Default and Named Exports in JavaScript
-
-In JavaScript, **default exports** and **named exports** are two ways to export modules, each serving different purposes. Here’s a detailed comparison:
 
 ## 1. Default Exports
 - **Purpose**: Used when you want to export a single main value or functionality from a module.
@@ -97,14 +69,11 @@ In JavaScript, **default exports** and **named exports** are two ways to export 
 - **Importing**: You can import a default export with any name.
 - **Example**:
     ```javascript
-    // calculator.js
     export default function multiply(a, b) {
       return a * b;
     }
-
-    // main.js
-    import multiply from './calculator.js'; // Import without using braces
-    console.log(multiply(4, 5)); // Output: 20
+    import multiply from './calculator.js'; 
+    console.log(multiply(4, 5)); 
     ```
 
 ## 2. Named Exports
@@ -113,7 +82,6 @@ In JavaScript, **default exports** and **named exports** are two ways to export 
 - **Importing**: Must use the exact names when importing, enclosed in curly braces `{}`.
 - **Example**:
     ```javascript
-    // mathUtils.js
     export function add(a, b) {
       return a + b;
     }
@@ -121,11 +89,9 @@ In JavaScript, **default exports** and **named exports** are two ways to export 
     export function subtract(a, b) {
       return a - b;
     }
-
-    // main.js
-    import { add, subtract } from './mathUtils.js'; // Import with braces
-    console.log(add(2, 3)); // Output: 5
-    console.log(subtract(5, 3)); // Output: 2
+    import { add, subtract } from './mathUtils.js'; 
+    console.log(add(2, 3));
+    console.log(subtract(5, 3)); 
     ```
 
 ## Differences Summary:
@@ -138,18 +104,15 @@ In JavaScript, **default exports** and **named exports** are two ways to export 
   - Must import with exact names using curly braces.
   - Allows importing multiple items simultaneously.
 
-## Combined Usage
+# Combined Usage
 You can use both named and default exports in the same module if needed:
 ```javascript
-// complexMath.js
 export function divide(a, b) {
   return a / b;
 }
-
 export default function square(a) {
   return a * a;
 }
-// main.js
 import square, { divide } from './complexMath.js';
 console.log(square(5));
 console.log(divide(10, 2));
@@ -255,7 +218,7 @@ function App() {
 - **Props** enable components to receive data from their parent components.
 
 **Code Example**:
-```
+```javascript
 import React, { useState } from 'react';
 
 function Greeting({ name }) {
@@ -310,5 +273,6 @@ React re-renders components for several reasons:
 - **JSX**: Combines JavaScript with an XML-like syntax, allowing you to write code that looks like HTML within JavaScript. JSX is then compiled to pure JavaScript by tools like Babel.
 
   **Code Example**:
-  ```const element = <div>Hello, world!</div>;
+  ```javascript
+  const element = <div>Hello, world!</div>;
   ```
