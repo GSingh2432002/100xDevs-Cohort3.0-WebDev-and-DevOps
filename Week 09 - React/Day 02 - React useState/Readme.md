@@ -46,6 +46,7 @@ useEffect(() => {
 }, [count]); // Runs only when `count` changes
 ```
 
+---
 
 ## 5. What is Conditional Rendering?
 Conditional rendering means displaying content based on a condition.
@@ -55,6 +56,8 @@ Conditional rendering means displaying content based on a condition.
 // Using ternary operator
 return loggedIn ? <Dashboard /> : <Login />;
 ```
+
+---
 
 ## 6. What is useState?
 `useState` is a React Hook that allows you to add state management to functional components. It lets your components "remember" values between renders, such as form inputs, counters, or toggle switches.
@@ -88,6 +91,9 @@ function Counter() {
 
 export default Counter;
 ```
+
+---
+
 
 ## 6. What is `useEffect`?
 
