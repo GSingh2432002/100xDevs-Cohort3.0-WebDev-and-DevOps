@@ -154,8 +154,21 @@ function Greeting() {
   
   **Code Example**:
   ```javascript
-  function Welcome(props) {
-    return <h1>Welcome, {props.name}!</h1>;
+  import React, { useState } from 'react';
+  
+  const FuntionalCounter = () => {
+    const [count, setCount] = useState(0);
+
+    function increment() {
+      setCount(count + 1);
+    }
+
+    return(
+      <div>
+        <p>Count: {count}</p>
+        <button onClick={increment}>+</button>
+      </div>
+    )
   }
   ```
 - **Class Components**: More complex components that can manage their own state and lifecycle methods (used less often with the advent of hooks).
@@ -164,9 +177,20 @@ function Greeting() {
   ```javascript
   import React, { Component } from 'react';
 
-  class Welcome extends Component {
+  class ClassCounter extends Component {
+    state = { count: 0 };
+
+    increment = () => {
+        this.setState({ count: this.state.count + 1 });
+    };
+
     render() {
-      return <h1>Welcome, {this.props.name}!</h1>;
+        return (
+            <div>
+                <p>Count: {this.state.count}</p>
+                <button onClick={this.increment}>Increment</button>
+            </div>
+        );
     }
   }
   ```

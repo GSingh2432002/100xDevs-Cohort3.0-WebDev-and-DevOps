@@ -26,10 +26,75 @@ Unmounting is when a React component is removed from the DOM.
 - When navigating away from a route in a single-page app.
 
 ### Lifecycle:
+In React, lifecycle events (or lifecycle methods) refer to the specific points in a component's life where you can execute code in response to changes or actions. These events help you manage tasks such as data fetching, subscriptions, and cleaning up resources.
+
 - **Class Components**: `componentWillUnmount` runs before unmounting.
+
+#### Example:
+```javascript
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+
+  componentDidMount() {
+    console.log('Component mounted');
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log('Component updated');
+  }
+
+  componentWillUnmount() {
+    console.log('Component will unmount');
+  }
+
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count}</p>
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Increment
+        </button>
+      </div>
+    );
+  }
+}
+```
+
 - **Functional Components**: Return a cleanup function in `useEffect`.
 
+#### Example:
+```javascript
+import React, { useState, useEffect } from 'react';
+
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('Component mounted or count updated');
+
+  }, [count]); // Runs on mount and when count changes
+
+	useEffect(() => {
+		    console.log('Component mounted');
+    return () => {
+      console.log('Component will unmount');
+    };
+	}, [])
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
 ---
+
 
 ## 4. What is Dependency Array?
 The dependency array in `useEffect` specifies when the effect should run.
@@ -97,7 +162,7 @@ export default Counter;
 
 ## 6. What is `useEffect`?
 
-`useEffect` is a React Hook that lets you perform side effects in functional components. Examples of side effects include:
+`useEffect` is a React Hook that lets you perform side effects in functional components.  It can be used for data fetching, subscriptions, or manually changing the DOM. Examples of side effects include:
 
 - Fetching data from an API.
 - Subscribing to events.
@@ -114,7 +179,196 @@ useEffect(() => {
   };
 }, [dependencies]);
 ```
-- **Callback function**: Contains the logic to execute as a side effect.
-- **Cleanup function (optional)**: Runs before the effect re-runs or the component unmounts.
-- **Dependency array**: Determines when the effect runs. An empty array `[]` means the effect runs only once (on mount).
+- **Callback function**: The first argument to useEffect is the effect function, where you put the code that performs the side effect. or Contains the effect function, where you put the code that performs the side effect..
+- **Cleanup function (optional)**: If your side effect needs cleanup (e.g., unsubscribing from a WebSocket, clearing intervals), useEffect allows you to return a function that React will call when the component unmounts or before re-running the effect. or Runs before the effect re-runs or the component unmounts.
+- **Dependency array**: The second argument is the dependencies array, which controls when the effect runs. This array tells React to re-run the effect only when certain values (props or state) change. If you pass an empty array [], the effect will only run once after the initial render. or Determines when the effect runs. An empty array `[]` means the effect runs only once (on mount).
 
+
+---
+
+
+## 7. What is `children`?
+The `children` prop allows you to pass elements or components as props to other components.
+
+### Example:
+
+```javascript
+import React from 'react';
+
+const Card = ({ children }) => {
+    return (
+        <div style={{
+            border: '1px solid #ccc',
+            borderRadius: '5px',
+            padding: '20px',
+            margin: '10px',
+            boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.1)',
+        }}>
+            {children}
+        </div>
+    );
+};
+
+const App = () => {
+    return (
+        <div>
+            <Card>
+                <h2>Card Title</h2>
+                <p>This is some content inside the card.</p>
+            </Card>
+            <Card>
+                <h2>Another Card</h2>
+                <p>This card has different content!</p>
+            </Card>
+        </div>
+    );
+};
+
+export default App;
+```
+
+---
+
+## 8. What is `List and Keys`?
+When rendering `lists`, each item should have a unique `key` prop for React to track changes efficiently.
+
+### Example:
+
+```javascript
+import React from 'react';
+
+const ItemList = ({ items }) => {
+    return (
+        <ul>
+            {items.map(item => (
+                <li key={item.id}>{item.name}</li>
+            ))}
+        </ul>
+    );
+};
+
+const App = () => {
+    const items = [
+        { id: 1, name: 'Item 1' },
+        { id: 2, name: 'Item 2' },
+        { id: 3, name: 'Item 3' },
+    ];
+
+    return <ItemList items={items} />;
+};
+```
+
+---
+
+## 9. What is `Inline Styling`?
+`Inline styling` in React allows you to apply CSS styles directly to elements using a JavaScript object
+
+### Example:
+
+```javascript
+import './App.css'
+
+function App() {
+  return (
+    <div>
+      <MyComponent />
+    </div>
+  )
+}
+
+function MyComponent() {
+  return (
+    // We are passing style as an object which you can define separately or passing directly in the element.
+    <div style={{ backgroundColor: 'blue', color: 'white', fontSize: 28 }}>
+      Hello, World!
+    </div>
+  );
+}
+export default App
+```
+
+---
+
+
+## 10. What is `Error Boundary`?
+`Error boundaries` are React components that catch JavaScript errors in their child component tree and display a fallback UI. Error boundaries only exist in class based components.
+
+### Example:
+
+```javascript
+import React from 'react';
+import './App.css'
+
+function App() {
+  return (
+      <div>
+        <ErrorBoundary>
+          <Card1 />
+        </ErrorBoundary>
+        
+          <Card2 />
+      </div>
+  )
+}
+
+function Card1() {
+  throw new Error('I crashed!')
+  return (
+      <div>
+          <h1 style={{ backgroundColor: "aliceblue" }}>Card 1</h1>
+      </div>
+  )
+}
+
+function Card2() {
+  return (
+      <div>
+          <h1 style={{ backgroundColor: "antiquewhite" }}>Card 2</h1>
+      </div>
+  )
+}
+
+class ErrorBoundary extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { hasError: false };
+    }
+
+    static getDerivedStateFromError(error) {
+        return { hasError: true };
+    }
+
+    componentDidCatch(error, info) {
+        console.error("Error caught:", error, info);
+    }
+
+    render() {
+        if (this.state.hasError) {
+            return <h1>Something went wrong.</h1>;
+        }
+
+        return this.props.children; 
+    }
+}
+
+export default App
+```
+
+---
+
+
+## 11. What is `Fragment`?
+In React, a component can return a single parent element, but it can contain multiple children within that single parent.
+
+### Example:
+
+```javascript
+const MyComponent = () => {
+    return (
+        <>
+            <h1>Hello</h1>
+            <p>World</p>
+        </>
+    );
+};
+```
