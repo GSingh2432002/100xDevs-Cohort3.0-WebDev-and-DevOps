@@ -73,8 +73,6 @@ It is the study of how colors interact and the effects they create when combined
 2. Color value: Refers to the relative lightness, darkness, saturation and hue.
 3. Color Temperature: It is used to describe how cool or warm the color is. Warm colors (such as red, orange, yellow) are associated with feelings of warmth, excitement and energy. Cool colors (like blue, green, and purple) are often linked to feelings of calm, relaxation, and serenity.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/9bf3c035-3e81-4c8a-ab5b-233279599a7e/image.png)
-
 ### Contrast
 
 It refers to the difference in luminance or color that makes an object distinguishable from others. Good contrast improves readability and ensures that key elements stand out.
