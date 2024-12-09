@@ -1,1 +1,1 @@
-### Figma File Shared in Live Class by Keshav:- `https://www.figma.com/design/ZBK9jxBAZbnaoYPLbbiLHr/ZubaCanceri?node-id=0-1&t=OdXhRcZTyJfWLOvs-1`
+### Figma File Shared in Live Class by Keshav:- https://www.figma.com/design/ZBK9jxBAZbnaoYPLbbiLHr/ZubaCanceri?node-id=0-1&t=OdXhRcZTyJfWLOvs-1
