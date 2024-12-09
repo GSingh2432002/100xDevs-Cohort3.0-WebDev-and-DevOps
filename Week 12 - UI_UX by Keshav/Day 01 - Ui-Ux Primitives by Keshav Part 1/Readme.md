@@ -3,11 +3,8 @@
 **Typeface** is the design of the letters (e.g., Rethink Sans, Poppins). **Font** refers to a specific style or weight within that typeface (e.g., Poppins Bold 16px). 
 
 > In simple terms, typeface is the family, and font is the individual member within the family.
-> 
 
 ### Types of Fonts
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/187776bb-11f9-4921-864b-7dd20d650637/image.png)
 
 1. **Serif Fonts**:
 - Serif fonts have small lines attached to the end of strokes in letters. These fonts are seen as formal, traditional, and trustworthy.
@@ -39,9 +36,6 @@
 - Font weight refers to the thickness of each character in of the font.
 
 > **Tip:** Avoid overusing bold or italic, as too much emphasis can reduce clarity and hierarchy.
-> 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/9c9275c4-fb4c-477e-8ec0-f514a2597483/image.png)
 
 ### Font Size
 
@@ -50,15 +44,12 @@
 - **Body Text**: 16px is the standard size for comfortable readability on most screens. For mobile, 14-16px works best.
 
 > **Best Practice:** Maintain proportional sizes between headings and body text to create a visual flow.
-> 
 
 ### Typography Jargon:
 
 - Leading (Line height): The space between lines of text. Too tight makes it hard to read, too loose makes the text disjointed. For body text, a line-height of 1.5 to 1.75 times the font size is typically ideal.
 - Tracking (letter spacing): The space between characters in a block of text, affecting the overall density of text. It’s better not to change this unless you know what you’re doing as it might create a bad reading experience.
 - Kerning: The space between specific pairs of letters to make the text look more balanced (e.g., A and V in some fonts).
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/2714f528-5800-4588-82d8-cbce963c46a3/image.png)
 
 ### Resources
 
@@ -99,8 +90,6 @@ It refers to the difference in luminance or color that makes an object distingui
 
 ### 60-30-10 Rule
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/b9c188cc-b6f3-4e66-af39-261c132eac95/image.png)
-
 **Breakdown**:
 
 - **60%**: Dominant Color – this will be the main color of your interface (e.g., background or large sections).
@@ -123,7 +112,6 @@ It refers to the difference in luminance or color that makes an object distingui
 - **White**: Purity, simplicity, cleanliness. Common in modern, clean web designs, often as a background.
 
 > **Tip**: Ensure your color choice aligns with your brand’s values and the emotions you want to evoke in your users.
-> 
 
 ### **The Problem with Too Many Colors**
 
@@ -136,7 +124,6 @@ It refers to the difference in luminance or color that makes an object distingui
 **Solution**: Stick to the **60-30-10 Rule** and choose your colors wisely based on brand and usability.
 
 > **Tip**: Use the accent color sparingly, focusing on **CTAs**, **notifications**, or elements that require immediate user attention.
-> 
 
 ### Resources
 
@@ -157,8 +144,6 @@ User Experience (UX) - Includes how a user interacts with and experiences a prod
 
 UX without UI is like brain without a body & a UI without UX is like a human without it’s brain.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/94b6b339-2f64-484f-8be5-28e6c06545da/image.png)
-
 ### **Why UI/UX Matters:**
 
 - **First Impressions:** Users decide whether they like your site or app within 50 milliseconds. Bad UI = trust destroyed instantly.
@@ -175,10 +160,8 @@ UX without UI is like brain without a body & a UI without UX is like a human wit
 
 ## 1. **Hierarchy**
     
-    It refers to the arrangement of elements in a way that communicates importance and guides users through the interface. 
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/e14ae3e6-2d52-48f6-88ba-f3e3db7a21ff/image.png)
-    
+    It refers to the arrangement of elements in a way that communicates importance and guides users through the interface.
+
     - **Types of Hierarchy**
         - **Visual Hierarchy**: Organizes elements visually to guide user focus (e.g., size, color, spacing).
         - **Content Hierarchy**: Organizes the information structure, such as headings, subheadings, and body content.
@@ -201,8 +184,6 @@ UX without UI is like brain without a body & a UI without UX is like a human wit
 ## 3. **White Space (Negative Space)**
     
     It refers to the empty spaces around elements in your design. It’s a crucial element of any layout, providing balance, separation, and focus.
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/2c19aa46-2291-40bc-ba66-0fe5dc890ccd/image.png)
     
      It helps with:
     
@@ -238,31 +219,21 @@ Let’s discuss some important UX laws:
     - **Principle**: The more choices you present, the longer it takes for users to make a decision.
     - **Application**: Limit choices and break complex tasks into smaller steps (e.g., multi-step forms).
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/ed6cc6c7-1d93-4b6d-bdcc-4f8df75b6459/image.png)
-    
 2.  **Fitts’s Law**
     - **Principle**: The time to reach a target depends on its size and distance.
     - **Application**: Make buttons large and place frequently used elements within easy reach, especially on mobile.
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/07893cdf-e0b6-417d-9be0-c91df72ba04b/image.png)
-    
 3. **Jakob’s Law**
     - **Principle**: Users prefer interfaces that work like those they’re already familiar with.
     - **Application**: Stick to established UI patterns (e.g., cart icon in top-right corner on e-commerce sites).
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/309f6898-a187-46d9-aa51-2414eede3feb/image.png)
-    
+
 4. **Miller’s Law**
     - **Principle**: People can hold 7 (±2) items in their working memory.
     - **Application**: Chunk information and avoid overwhelming users with too many details at once.
     
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/c6c1d353-4584-40df-8fd0-a366f9ee31c0/image.png)
-    
 5. **Law of Proximity**
     - **Principle**: Objects close to each other are perceived as related.
     - **Application**: Group related elements together (e.g., form labels with input fields).
-    
-    ![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/21c9aa1c-deac-4363-aac5-f97f0cf9bf11/image.png)
     
 6. **Aesthetic-Usability Effect**
     - **Principle**: Users perceive visually appealing designs as more usable.
@@ -292,8 +263,6 @@ The UI design process typically follows a series of stages that guide designers 
     - **Purpose**: Validate the design through user testing to gather feedback and identify usability issues.
     - **Methods**: Usability testing sessions, A/B testing, and heuristic evaluations.
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/0b4af91c-e2b6-43ff-95c4-4391a983095a/image.png)
-
 ### **Taking References**
 
 Taking references is a valuable part of the design process, not a negative practice. The key is to use them as inspiration rather than for direct copying:
@@ -322,15 +291,11 @@ Comprehensive guidelines that include design patterns, components, and branding 
 
 ### Design Tools - Figma
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/84b72bce-d96f-4134-9a4f-0a03492ec15d/image.png)
-
 Figma is a web-based design tool widely used for interface design, prototyping, and collaboration. It allows designers to create user interfaces for websites and applications.
 
 ### Responsive Design
 
 It is an approach to web design that aims to create a seamless experience across a variety of devices and screen sizes, from desktops to smartphones. The goal is to ensure that a website or application adapts its layout and content to provide an optimal viewing experience.
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/0fcd3897-10a4-47ca-b86e-f6db588da47f/01954c9d-a0a5-4019-8a80-5f659032fa32/image.png)
 
 When designing responsive websites, there are two main approaches: mobile-first and desktop-first. Each has its own advantages and considerations.
 
