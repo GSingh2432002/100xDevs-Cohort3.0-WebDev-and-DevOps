@@ -55,8 +55,6 @@ This property is shared between Flexbox and CSS Grid and controls **horizontal a
 
 Responsiveness ensures that web content adapts seamlessly to different screen sizes and devices, providing an optimal user experience.
 
----
-
 ## **Techniques for Responsive Design**
 
 ### **CSS Media Queries**
