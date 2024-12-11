@@ -67,6 +67,8 @@ npm init -y
 - Creates a `package.json` file with default values.
 - This file contains metadata about your project, such as dependencies and scripts.
 
+---
+
 ### 2. **Install TypeScript**
 ```bash
 npm i typescript
@@ -74,6 +76,7 @@ npm i typescript
 - Installs TypeScript as a dependency in your project.
 - Adds TypeScript to the `node_modules` folder and updates `package.json`.
 
+---
 
 ### 3. **Initialize TypeScript Configuration**
 ```bash
@@ -91,6 +94,8 @@ npx tsc --init
     }
   }
   ```
+
+---
 
 ### 4. **Compile TypeScript Files**
 ```bash
@@ -110,6 +115,8 @@ node filename.js
   ```bash
   node dist/app.js
   ```
+
+---
 
 ## Example Workflow
 
