@@ -95,12 +95,12 @@ let john: ManagerEmployee = {
 };
 ```
 
-### Difference Between Union and Intersection
+## Difference Between Union and Intersection
 | Feature             | Union (`|`)                            | Intersection (`&`)                     |
 |---------------------|---------------------------------------|---------------------------------------|
 | Behavior            | A variable can be of any one type.   | A variable must satisfy all combined types. |
-| Symbol              | `|` (pipe)                           | `&` (ampersand)                       |
-| Example             | `string | number` (either type)      | `Person & Manager` (must satisfy both interfaces). |
+| Symbol              | `\|` (pipe)                           | `&` (ampersand)                       |
+| Example             | `string \| number` (either type)      | `Person & Manager` (must satisfy both interfaces). |
 
 ### When to Use Type?
 Use `type` when you need more flexibility, such as defining unions and intersections. It is especially useful when working with complex or custom type definitions that don't fit neatly into an interface.
