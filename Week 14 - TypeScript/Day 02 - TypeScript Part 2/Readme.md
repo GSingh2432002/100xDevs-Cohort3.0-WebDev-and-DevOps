@@ -97,6 +97,26 @@ let john: ManagerEmployee = {
 ```
 ---
 
+## Difference Between Union and Intersection
+| Feature             | Union (`|`)                            | Intersection (`&`)                     |
+|---------------------|---------------------------------------|---------------------------------------|
+| Behavior            | A variable can be of any one type.   | A variable must satisfy all combined types. |
+| Symbol              | `|` (pipe)                           | `&` (ampersand)                       |
+| Example             | `string | number` (either type)      | `Person & Manager` (must satisfy both interfaces). |
+
+### When to Use Type?
+Use `type` when you need more flexibility, such as defining unions and intersections. It is especially useful when working with complex or custom type definitions that don't fit neatly into an interface.
+
+## Difference Between Type and Interface
+| Feature              | `type`                               | `interface`                           |
+|----------------------|-------------------------------------|---------------------------------------|
+| Use Case             | For aliases, unions, intersections, etc. | For describing object shapes.         |
+| Extension            | Cannot extend but can use intersections. | Can extend other interfaces.          |
+| Flexibility          | Can describe any type, including unions. | Limited to object-like types.         |
+| Declaration Merging  | Not supported.                      | Supported (can add properties later). |
+
+---
+
 # 3. What is Abstract?
 The `abstract` keyword is used to define abstract classes and abstract methods. An abstract class serves as a blueprint for other classes. It cannot be instantiated directly, meaning you cannot create objects from it. Instead, it is meant to be extended by other classes that implement its abstract methods.
 
@@ -167,23 +187,3 @@ const circle = new Circle(7);
 console.log(circle.calculateArea());      // 153.938...
 console.log(circle.calculatePerimeter()); // 43.982...
 ```
----
-
-### Difference Between Union and Intersection
-| Feature             | Union (`|`)                            | Intersection (`&`)                     |
-|---------------------|---------------------------------------|---------------------------------------|
-| Behavior            | A variable can be of any one type.   | A variable must satisfy all combined types. |
-| Symbol              | `|` (pipe)                           | `&` (ampersand)                       |
-| Example             | `string | number` (either type)      | `Person & Manager` (must satisfy both interfaces). |
-
-### When to Use Type?
-Use `type` when you need more flexibility, such as defining unions and intersections. It is especially useful when working with complex or custom type definitions that don't fit neatly into an interface.
-
----
-## Difference Between Type and Interface
-| Feature              | `type`                               | `interface`                           |
-|----------------------|-------------------------------------|---------------------------------------|
-| Use Case             | For aliases, unions, intersections, etc. | For describing object shapes.         |
-| Extension            | Cannot extend but can use intersections. | Can extend other interfaces.          |
-| Flexibility          | Can describe any type, including unions. | Limited to object-like types.         |
-| Declaration Merging  | Not supported.                      | Supported (can add properties later). |
