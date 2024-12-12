@@ -30,7 +30,6 @@ if (user.age > 18) {
     console.log("User is an adult");
 }
 ```
----
 
 # 2. What is Types?
 The `type` keyword in TypeScript is a way for you to provide type aliases to your variables, objects, and functions. These aliases essentially describe what your data is going to look like. You can describe what your data is going to look like by using the core types (e.g. `string`, `number`, `boolean`, etc.) or by creating your own custom types.
@@ -95,9 +94,8 @@ let john: ManagerEmployee = {
     role: "Team Lead"
 };
 ```
----
 
-## Difference Between Union and Intersection
+### Difference Between Union and Intersection
 | Feature             | Union (`|`)                            | Intersection (`&`)                     |
 |---------------------|---------------------------------------|---------------------------------------|
 | Behavior            | A variable can be of any one type.   | A variable must satisfy all combined types. |
@@ -114,8 +112,6 @@ Use `type` when you need more flexibility, such as defining unions and intersect
 | Extension            | Cannot extend but can use intersections. | Can extend other interfaces.          |
 | Flexibility          | Can describe any type, including unions. | Limited to object-like types.         |
 | Declaration Merging  | Not supported.                      | Supported (can add properties later). |
-
----
 
 # 3. What is Abstract?
 The `abstract` keyword is used to define abstract classes and abstract methods. An abstract class serves as a blueprint for other classes. It cannot be instantiated directly, meaning you cannot create objects from it. Instead, it is meant to be extended by other classes that implement its abstract methods.
