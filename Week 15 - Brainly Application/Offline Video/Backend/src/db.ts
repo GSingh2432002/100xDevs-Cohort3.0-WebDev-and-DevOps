@@ -1,10 +1,11 @@
+
 import mongoose, {model, Schema} from "mongoose";
 
-mongoose.connect("mongodb+srv://gsingh332211:WdlJp5rC1UbwXWFr@newcluster1.6ymvq.mongodb.net/brainly");
+mongoose.connect("mongodb://localhost:27017/brainly")
 
 const UserSchema = new Schema({
     username: {type: String, unique: true},
-    password: {type: String},
+    password: String
 })
 
 export const UserModel = model("User", UserSchema);
@@ -12,8 +13,15 @@ export const UserModel = model("User", UserSchema);
 const ContentSchema = new Schema({
     title: String,
     link: String,
-    tags: [{type: mongoose.Types.ObjectId, ref: "Tag"}],
-    userId: {type: mongoose.Types.ObjectId, ref: "User", required: true},
+    tags: [{type: mongoose.Types.ObjectId, ref: 'Tag'}],
+    type: String,
+    userId: {type: mongoose.Types.ObjectId, ref: 'User', required: true },
 })
 
+const LinkSchema = new Schema({
+    hash: String,
+    userId: {type: mongoose.Types.ObjectId, ref: 'User', required: true, unique: true },
+})
+
+export const LinkModel = model("Links", LinkSchema);
 export const ContentModel = model("Content", ContentSchema);
