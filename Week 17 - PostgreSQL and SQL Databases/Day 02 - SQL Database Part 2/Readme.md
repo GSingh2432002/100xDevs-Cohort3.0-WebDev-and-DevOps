@@ -68,7 +68,6 @@ FROM addresses
 WHERE user_id = 1;
 ```
 ---
-
 # 2. What is Primary Key?
 A primary key is a unique identifier for a record in a database table. It ensures that each row in the table is unique and can be referenced unambiguously.
 
@@ -90,7 +89,6 @@ CREATE TABLE users (
 );
 ```
 ---
-
 # 3. What is Foreign Key?
 A foreign key is a column or a set of columns in one table that establishes a link (relationship) between the data in two tables. It references the primary key of another table (or sometimes the same table in the case of self-referential relationships).
 
@@ -99,9 +97,7 @@ A foreign key is a column or a set of columns in one table that establishes a li
 - **Referential Integrity**: Ensures values in the foreign key column exist in the referenced table's primary key column.
 - **Multiple References**: A table can have multiple foreign keys.
 - **Nullability**: Can contain `NULL` values unless constrained otherwise.
-
 ---
-
 # 4. What is Transactions?
 A transaction in a database is a sequence of one or more SQL operations (queries) that are executed as a single unit of work. A transaction ensures that either all operations succeed (committed) or none are applied (rolled back).
 
@@ -133,8 +129,7 @@ Rollback on failure:
 ROLLBACK; -- Undo all changes if any operation fails
 ```
 ---
-
-# 5. Why Transactions Solve the Problem?
+# 5. Why Transactions Solve the Problem
 Transactions ensure that either all operations are applied successfully or none at all, preserving data consistency in case of failure (e.g., backend crash).
 ---
 # 6. What is Joins?
@@ -154,6 +149,30 @@ Inner Join:
 SELECT users.username, addresses.city
 FROM users
 INNER JOIN addresses ON users.id = addresses.user_id;
+```
+
+Left Join:
+
+```sql
+SELECT users.username, addresses.city
+FROM users
+LEFT JOIN addresses ON users.id = addresses.user_id;
+```
+
+Right Join:
+
+```sql
+SELECT users.username, addresses.city
+FROM users
+RIGHT JOIN addresses ON users.id = addresses.user_id;
+```
+
+Full Outer Join:
+
+```sql
+SELECT users.username, addresses.city
+FROM users
+FULL JOIN addresses ON users.id = addresses.user_id;
 ```
 ---
 # 7. What is SQL Injection?
