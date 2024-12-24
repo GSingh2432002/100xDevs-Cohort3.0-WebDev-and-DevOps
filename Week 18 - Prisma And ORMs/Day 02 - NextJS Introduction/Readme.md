@@ -165,6 +165,7 @@ In a Next.js project using the app directory, a layout.tsx (or layout.jsx) file 
 
        2. **File Location**: The layout.tsx file should be placed in a route folder inside the app directory.
            For example:
+            ```
                app/
                    ├── layout.tsx         // Root layout
                    ├── page.tsx           // Home page
@@ -174,7 +175,8 @@ In a Next.js project using the app directory, a layout.tsx (or layout.jsx) file 
                        │   └── page.tsx   // Sign-in page
                        └── signup/
                            └── page.tsx   // Sign-up page
-
+            ```
+            
        3. **Children Prop**: The layout component wraps the child pages. Next.js automatically injects the children prop, representing the content of the nested route or page.
 
        4. **Persistent Components**: Components defined in a layout.tsx persist while navigating between child pages, reducing unnecessary re-renders.
