@@ -161,11 +161,10 @@ This setup ensures you’re ready to work with the latest features of Next.js!
 In a Next.js project using the app directory, a layout.tsx (or layout.jsx) file defines the layout for a specific route or the entire application. Layouts allow you to create reusable structures, such as navigation bars, footers, or sidebars, that persist across pages in a given route or nested routes.
 
    **Key Features of layout.tsx**
-       1. **Reusable Structure Across Pages**: A layout.tsx file is used to define components or structure (like headers or sidebars) that should appear on multiple pages.
+       1. Reusable Structure Across Pages: A layout.tsx file is used to define components or structure (like headers or sidebars) that should appear on multiple pages.
 
-       2. **File Location**: The layout.tsx file should be placed in a route folder inside the app directory.
+       2. File Location: The layout.tsx file should be placed in a route folder inside the app directory.
            For example:
-            ```
                app/
                    ├── layout.tsx         // Root layout
                    ├── page.tsx           // Home page
@@ -175,8 +174,7 @@ In a Next.js project using the app directory, a layout.tsx (or layout.jsx) file 
                        │   └── page.tsx   // Sign-in page
                        └── signup/
                            └── page.tsx   // Sign-up page
-            ```
-            
-       3. **Children Prop**: The layout component wraps the child pages. Next.js automatically injects the children prop, representing the content of the nested route or page.
 
-       4. **Persistent Components**: Components defined in a layout.tsx persist while navigating between child pages, reducing unnecessary re-renders.
+       3. Children Prop: The layout component wraps the child pages. Next.js automatically injects the children prop, representing the content of the nested route or page.
+
+       4. Persistent Components: Components defined in a layout.tsx persist while navigating between child pages, reducing unnecessary re-renders.
