@@ -1,5 +1,5 @@
 {
-  "name": "my-turborepo",
+  "name": "Lecture Code",
   "private": true,
   "scripts": {
     "build": "turbo build",
